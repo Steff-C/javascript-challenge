@@ -18,3 +18,19 @@ function loadTableRows(data) {
         })
     })
 }
+
+const handleClick = () => {
+    d3.event.preventDefault()
+    let filteredTable = tableData;
+
+    
+    let dateInput = d3.select("#datetime").property("value");
+   
+    console.log("Date");
+    
+
+    if (dateInput) {
+        filteredTable = filteredTable.filter((row) => row.datetime === dateInput)
+    }
+   
+    tbody.html("")  
