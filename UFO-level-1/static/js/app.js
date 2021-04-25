@@ -24,13 +24,15 @@ const handleClick = () => {
     let filteredTable = tableData;
 
     
-    let dateInput = d3.select("#datetime").property("value");
-   
-    console.log("Date");
-    
+    let dateInput = d3.select("#datetime").property("value")
+    let cityInput = d3.select("#city").property("value")
+    let stateInput = d3.select("#state").property("value")
+    let countryInput = d3.select("#country").property("value")
+    let shapeInput = d3.select("#shape").property("value")
+    console.log(`Date: ${dateInput}`)
+    console.log(`City: ${cityInput}`)
+    console.log(`State: ${stateInput}`)
+    console.log(`Country: ${countryInput}`)
+    console.log(`Shape: ${shapeInput}`)
 
-    if (dateInput) {
-        filteredTable = filteredTable.filter((row) => row.datetime === dateInput)
-    }
-   
-    tbody.html("")  
+}
